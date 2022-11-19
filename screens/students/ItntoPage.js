@@ -46,6 +46,11 @@ const WelcomeLogin = () => {
         resizeMode="cover"
         source={require("../../assets/user-alt.png")}
       />
+        <Image
+        style={styles.vectorIcon1}
+        resizeMode="cover"
+        source={require("../../assets/Vector12.png")}
+      />
     </View>
   );
 };
@@ -131,7 +136,7 @@ const styles = StyleSheet.create({
   passwordText: {
     position: "absolute",
     top: 544,
-    left: 56,
+    left: 78,
     fontSize: 14,
     fontFamily: "Lato",
     color: "#a1a1a1",
@@ -193,6 +198,18 @@ const styles = StyleSheet.create({
     width: 17,
     height: 17,
     overflow: "hidden",
+  },
+  vectorIcon1: {
+    position: "absolute",
+    height: "2.35%",
+    width: "4.58%",
+    top: "67.38%",
+    right: "82.95%",
+    bottom: "34.27%",
+    left: "12.47%",
+    maxWidth: "100%",
+    overflow: "hidden",
+    maxHeight: "100%",
   },
 });
 
