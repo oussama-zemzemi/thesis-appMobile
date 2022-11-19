@@ -41,6 +41,11 @@ const WelcomeLogin = () => {
         resizeMode="cover"
         source={require("../../assets/Ellipse 12.png")}
       />
+      <Image
+        style={styles.userAltIcon}
+        resizeMode="cover"
+        source={require("../../assets/user-alt.png")}
+      />
     </View>
   );
 };
@@ -108,7 +113,7 @@ const styles = StyleSheet.create({
   yourEmailText: {
     position: "absolute",
     top: 458,
-    left: 56,
+    left: 75,
     fontSize: 14,
     fontFamily: "Lato",
     color: "#000",
@@ -179,6 +184,14 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     height: 852,
+    overflow: "hidden",
+  },
+  userAltIcon: {
+    position: "absolute",
+    top: 456,
+    left: 50,
+    width: 17,
+    height: 17,
     overflow: "hidden",
   },
 });
