@@ -1,25 +1,23 @@
 import * as React from "react";
-import { Text, StyleSheet, View, Pressable, Image } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { Image, StyleSheet, Text, View} from "react-native";
 
-
-const OwnerLoginForm = () => {
-  const navigation = useNavigation();
-
- 
+const StudentLogin = () => {
   return (
-    <View style={styles.welcomeLoginHouseOwner}>
+    
+    <View style={styles.welcomeLoginView}>
+      <Image
+        style={styles.undrawChoosingHouseRe1rv7Icon}
+        resizeMode="cover"
+        source={require("../../assets/undrawChoosingHouseRe1rv7Icon.png")}
+      />
       <Text style={styles.welcomeBackText1}>
         <Text style={styles.welcomeBackText}>Welcome back</Text>
         <Text style={styles.text}>{` `}</Text>
       </Text>
       <View style={styles.rectangleView} />
-      <Pressable
-        style={styles.rectanglePressable}
-        onPress={() => navigation.navigate("")}
-      />
-      <Text style={styles.signInText}>sign in</Text>
       <View style={styles.rectangleView1} />
+      <Text style={styles.signInText}>sign in</Text>
+      <View style={styles.rectangleView2} />
       <Text style={styles.yourEmailText}>Your email</Text>
       <Text style={styles.forgetPasswordText}>Forget Password?</Text>
       <Text style={styles.passwordText}>Password</Text>
@@ -27,7 +25,7 @@ const OwnerLoginForm = () => {
       <Image
         style={styles.vectorIcon}
         resizeMode="cover"
-        source={require("../../../assets/homeOwner/Vector (2).png")}
+        source={require("../../assets/Vector.png")}
       />
       <Text
         style={styles.dontHaveAnyAccount}
@@ -39,53 +37,48 @@ const OwnerLoginForm = () => {
       <Image
         style={styles.ellipseIcon}
         resizeMode="cover"
-        source={require("../../../assets/homeOwner/Ellipse 11.png")}
+        source={require("../../assets/Ellipse 11.png")}
       />
       <Image
         style={styles.ellipseIcon1}
         resizeMode="cover"
-        source={require("../../../assets/homeOwner/Ellipse 12.png")}
+        source={require("../../assets/Ellipse 12.png")}
       />
       <Image
         style={styles.userAltIcon}
         resizeMode="cover"
-        source={require("../../../assets/homeOwner/user-alt.png")}
+        source={require("../../assets/user-alt.png")}
       />
-      <Image
+        <Image
         style={styles.vectorIcon1}
         resizeMode="cover"
-        source={require("../../../assets/homeOwner/Vector (3).png")}
+        source={require("../../assets/Vector12.png")}
       />
-      <Image
+       <Image
         style={styles.groupIcon}
         resizeMode="cover"
-        source={require("../../../assets/homeOwner/Group 2.png")}
+        source={require("../../assets/Group 2.png")}
       />
       <Image
         style={styles.facebook1Icon}
         resizeMode="cover"
-        source={require("../../../assets/homeOwner/facebook 1.png")}
+        source={require("../../assets/facebook 1.png")}
       />
-      <Image
-        style={styles.undrawSelectHouseReS1j91Icon}
-        resizeMode="cover"
-        source={require("../../../assets/homeOwner/12.png")}
-      />
-      <Pressable
-        style={styles.vectorPressable}
-        onPress={() => navigation.navigate("Intro")}
-      >
-        <Image
-          style={styles.icon}
-          resizeMode="cover"
-          source={require("../../../assets/homeOwner/Vector (5).png")}
-        />
-      </Pressable>
     </View>
+    
+  
   );
 };
 
 const styles = StyleSheet.create({
+  undrawChoosingHouseRe1rv7Icon: {
+    position: "absolute",
+    top: 146,
+    left: 82,
+    width: 237,
+    height: 175,
+    overflow: "hidden",
+  },
   welcomeBackText: {
     fontSize: 24,
   },
@@ -94,8 +87,8 @@ const styles = StyleSheet.create({
   },
   welcomeBackText1: {
     position: "absolute",
-    top: 341,
-    left: 119,
+    top: 360,
+    left: 126,
     fontWeight: "700",
     fontFamily: "Lato",
     color: "#696969",
@@ -103,37 +96,35 @@ const styles = StyleSheet.create({
   },
   rectangleView: {
     position: "absolute",
-    top: 397,
+    top: 419,
     left: 33,
     borderRadius: 13,
     backgroundColor: "#d9d9d9",
     width: 310,
     height: 51,
   },
-  rectanglePressable: {
+  rectangleView1: {
     position: "absolute",
-    top: 602,
-    left: 62,
+    top: 618,
+    left: 34,
     borderRadius: 13,
     backgroundColor: "#3f424a",
-    width: 267,
-    height: 45,
+    width: 310,
+    height: 51,
   },
   signInText: {
     position: "absolute",
-    top: 611,
-    left: 159,
+    top: 630,
+    left: 155,
     fontSize: 24,
     fontFamily: "Lato",
     color: "#fff",
     textAlign: "left",
-    width: 87,
-    height: 25,
   },
-  rectangleView1: {
+  rectangleView2: {
     position: "absolute",
-    top: 485,
-    left: 33,
+    top: 508,
+    left: 34,
     borderRadius: 13,
     backgroundColor: "#d9d9d9",
     width: 310,
@@ -141,7 +132,7 @@ const styles = StyleSheet.create({
   },
   yourEmailText: {
     position: "absolute",
-    top: 417,
+    top: 439,
     left: 66,
     fontSize: 14,
     fontFamily: "Lato",
@@ -150,7 +141,7 @@ const styles = StyleSheet.create({
   },
   forgetPasswordText: {
     position: "absolute",
-    top: 554,
+    top: 573,
     left: 236,
     fontSize: 14,
     fontFamily: "Lato",
@@ -159,8 +150,8 @@ const styles = StyleSheet.create({
   },
   passwordText: {
     position: "absolute",
-    top: 499,
-    left: 65,
+    top: 526,
+    left: 66,
     fontSize: 14,
     fontFamily: "Lato",
     color: "#a1a1a1",
@@ -168,7 +159,7 @@ const styles = StyleSheet.create({
   },
   orText: {
     position: "absolute",
-    top: 710,
+    top: 733,
     left: 183,
     fontSize: 20,
     fontFamily: "Lato",
@@ -179,17 +170,17 @@ const styles = StyleSheet.create({
     position: "absolute",
     height: "1.96%",
     width: "6.36%",
-    top: "59.15%",
-    right: "16.54%",
-    bottom: "38.89%",
-    left: "77.1%",
+    top: "58.85%",
+    right: "16.28%",
+    bottom: "36.19%",
+    left: "73.35%",
     maxWidth: "100%",
     overflow: "hidden",
     maxHeight: "100%",
   },
   dontHaveAnyAccount: {
     position: "absolute",
-    top: 676,
+    top: 695,
     left: 96,
     fontSize: 14,
     fontFamily: "Lato",
@@ -204,8 +195,8 @@ const styles = StyleSheet.create({
   },
   signUpText1: {
     position: "absolute",
-    top: 676,
-    left: 253,
+    top: 695,
+    left: 269,
     fontSize: 14,
     fontFamily: "Lato",
     textAlign: "left",
@@ -227,7 +218,7 @@ const styles = StyleSheet.create({
   },
   userAltIcon: {
     position: "absolute",
-    top: 415,
+    top: 437,
     left: 41,
     width: 17,
     height: 17,
@@ -237,10 +228,10 @@ const styles = StyleSheet.create({
     position: "absolute",
     height: "2.35%",
     width: "4.58%",
-    top: "58.33%",
-    right: "85.24%",
-    bottom: "39.32%",
-    left: "10.18%",
+    top: "58.03%",
+    right: "84.99%",
+    bottom: "36.62%",
+    left: "10.43%",
     maxWidth: "100%",
     overflow: "hidden",
     maxHeight: "100%",
@@ -249,46 +240,22 @@ const styles = StyleSheet.create({
     position: "absolute",
     height: "7.04%",
     width: "33.08%",
-    top: "87.32%",
-    right: "33.84%",
-    bottom: "5.63%",
-    left: "33.08%",
+    top: "90.38%",
+    right: "34.86%",
+    bottom: "2.58%",
+    left: "32.06%",
     maxWidth: "100%",
     overflow: "hidden",
     maxHeight: "100%",
   },
   facebook1Icon: {
     position: "absolute",
-    top: 756,
-    left: 145,
+    top: 782,
+    left: 141,
     width: 30,
     height: 30,
   },
-  undrawSelectHouseReS1j91Icon: {
-    position: "absolute",
-    top: 122,
-    left: 46,
-    width: 297,
-    height: 186,
-    overflow: "hidden",
-  },
-  icon: {
-    height: "100%",
-    width: "100%",
-    maxWidth: "100%",
-    overflow: "hidden",
-    maxHeight: "100%",
-  },
-  vectorPressable: {
-    position: "absolute",
-    left: "4.58%",
-    top: "1.76%",
-    right: "90.84%",
-    bottom: "94.95%",
-    width: "4.58%",
-    height: "3.29%",
-  },
-  welcomeLoginHouseOwner: {
+  welcomeLoginView: {
     position: "relative",
     backgroundColor: "#dfe8ea",
     flex: 1,
@@ -297,4 +264,5 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
 });
-export default OwnerLoginForm;
+
+export default StudentLogin;
